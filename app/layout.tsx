@@ -3,9 +3,11 @@ import { Nunito } from 'next/font/google';
 import Navbar from './components/navbar/navbar';
 import ToasterProvider from './components/providers/toaster-provider';
 import ClientOnly from './components/client-only';
+import getCurrentUser from './actions/get-current-user';
+
 import RegisterModal from './components/modals/register-modal';
 import LoginModal from './components/modals/login-modal';
-import getCurrentUser from './actions/get-current-user';
+import RentModal from './components/modals/rent-modal';
 
 export const metadata = {
 	title: 'Airbnb',
@@ -23,6 +25,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
 			<body className={font.className}>
 				<ClientOnly>
 					<ToasterProvider />
+					<RentModal />
 					<LoginModal />
 					<RegisterModal />
 					<Navbar currentUser={currentUser} />
