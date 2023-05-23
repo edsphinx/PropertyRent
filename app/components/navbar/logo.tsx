@@ -8,6 +8,7 @@ const Logo = () => {
 
 	return (
 		<Image
+			onClick={() => router.push('/')}
 			priority={true}
 			alt='Logo'
 			className='hidden md:block cursor-pointer'
