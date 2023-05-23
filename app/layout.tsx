@@ -1,9 +1,9 @@
-import { Nunito } from 'next/font/google';
 import './globals.css';
+import { Nunito } from 'next/font/google';
 import Navbar from './components/navbar/navbar';
+import ToasterProvider from './components/providers/toaster-provider';
 import ClientOnly from './components/client-only';
 import RegisterModal from './components/modals/register-modal';
-import ToasterProvider from './components/providers/toaster-provider';
 import LoginModal from './components/modals/login-modal';
 import getCurrentUser from './actions/get-current-user';
 
