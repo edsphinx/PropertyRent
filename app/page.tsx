@@ -2,7 +2,6 @@ import Container from './components/container';
 import ClientOnly from './components/client-only';
 import EmptyState from './components/empty-state';
 import getListings from './actions/get-listings';
-import { list } from 'postcss';
 import ListingCard from './components/listings/listing-card';
 import getCurrentUser from './actions/get-current-user';
 
@@ -32,7 +31,7 @@ const Home = async () => {
 					2xl:grid-cols-6 
 					gap-8'
 				>
-					{listings.map((listing: any) => {
+					{listings.map((listing) => {
 						return (
 							<ListingCard
 								currentUser={currentUser}
