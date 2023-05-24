@@ -1,3 +1,50 @@
-export default function Home() {
-	return <div className='text-rose-500 text-2xl'>Hello Airbnb</div>;
-}
+import Container from './components/container';
+import ClientOnly from './components/client-only';
+import EmptyState from './components/empty-state';
+import getListings from './actions/get-listings';
+import { list } from 'postcss';
+import ListingCard from './components/listings/listing-card';
+import getCurrentUser from './actions/get-current-user';
+
+const Home = async () => {
+	const listings = await getListings();
+	const currentUser = await getCurrentUser();
+
+	if (listings.length === 0) {
+		return (
+			<ClientOnly>
+				<EmptyState showReset />
+			</ClientOnly>
+		);
+	}
+	return (
+		<ClientOnly>
+			<Container>
+				<div
+					className='
+					pt-24 
+					grid 
+					grid-cols-1 
+					sm:grid-cols-2 
+					md:grid-cols-3 
+					lg:grid-col-4 
+					xl:grid-cols-5 
+					2xl:grid-cols-6 
+					gap-8'
+				>
+					{listings.map((listing: any) => {
+						return (
+							<ListingCard
+								currentUser={currentUser}
+								key={listing.id}
+								data={listing}
+							/>
+						);
+					})}
+				</div>
+			</Container>
+		</ClientOnly>
+	);
+};
+
+export default Home;
