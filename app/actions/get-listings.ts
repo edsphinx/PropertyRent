@@ -21,10 +21,6 @@ const getListings = async (params: IListingParams) => {
       query.userId = userId;
     }
 
-    if (category) {
-      query.category = category;
-    }
-
     if (roomCount) {
       query.roomCount = {
         gte: +roomCount
@@ -45,6 +41,10 @@ const getListings = async (params: IListingParams) => {
 
     if (locationValue) {
       query.locationValue = locationValue;
+    }
+
+    if (category) {
+      query.category = category;
     }
 
     if (startDate && endDate) {

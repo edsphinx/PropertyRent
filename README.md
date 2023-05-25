@@ -1,8 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Porfolio Project based in a basic Airbnb
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+## Overview
+
+[Production Webste](https://rent-property-edsphinx.vercel.app/)
+
+![Porfolio Projet Rent Properties](https://res.cloudinary.com/dgicszour/image/upload/v1685022340/Screen_Shot_2023-05-25_at_07.41.34_eks6oh.png)
+
+Creating this app was a learning experience about the latest technologies but using the past knowledge, there is still more features that I wil keep adding is the comming months so be sure to back to check it out.
+
+Is a porfolio project using Next.js 13 and using some other tools, was a very interesting learning journey about the new features of NextJS like app directory file-system based router, play with some prisma Where Clauses and practicing TypeScript type-safe code
 
 ## Getting Started
 
-First, run the development server:
+### Setup .env file
+
+```js
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NEXTAUTH_SECRET=
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +43,25 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Built With
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+Typescript, NextJS, React, Tailwind, Prisma, MongoDB, NextAuth, Cloudinary
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Full responsiveness
+- Credential authentication
+- Google authentication
+- Github authentication
+- Image upload with Cloudinary
+- List Properties
+- Delete Properties
+- Reserve Properties
+- Add Favorites Properties
+- Create Reserves
+- Cancel Reserves
+- Filter Location, Dates and Guests
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Linkedin](https://www.linkedin.com/in/ofonck/)
