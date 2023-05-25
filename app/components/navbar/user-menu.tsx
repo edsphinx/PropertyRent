@@ -9,12 +9,14 @@ import MenuItem from './menu-item';
 import useRegisterModal from '../hooks/use-register-modal';
 import useLoginModal from '../hooks/use-login-modal';
 import useRentModal from '../hooks/use-rent-modal';
+import { useRouter } from 'next/navigation';
 
 interface UserMenuProps {
 	currentUser?: SafeUser | null;
 }
 
 const UserMenu = ({ currentUser }: UserMenuProps) => {
+	const router = useRouter();
 	const registerModal = useRegisterModal();
 	const loginModal = useLoginModal();
 	const rentModal = useRentModal();
@@ -56,7 +58,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 						{currentUser ? (
 							<>
 								<MenuItem
-									onClick={() => {}}
+									onClick={() => router.push('/trips')}
 									label='My Trips'
 								/>
 								<MenuItem
@@ -64,7 +66,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 									label='My Favorites'
 								/>
 								<MenuItem
-									onClick={() => {}}
+									onClick={() => router.push('/reservations')}
 									label='My Reservations'
 								/>
 								<MenuItem
