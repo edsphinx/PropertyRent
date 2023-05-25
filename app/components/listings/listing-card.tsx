@@ -3,7 +3,7 @@
 import { useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
-import useCountries from '../hooks/use-countries';
+import useCountries from '../../hooks/use-countries';
 import { SafeListing, SafeReservation, SafeUser } from '@/app/types';
 import Image from 'next/image';
 import HeartButton from '../heart-button';

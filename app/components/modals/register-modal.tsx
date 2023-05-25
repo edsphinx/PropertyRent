@@ -6,7 +6,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useCallback, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
-import useRegisterModal from '../hooks/use-register-modal';
+import useRegisterModal from '../../hooks/use-register-modal';
 import Modal from './modal';
 import Heading from '../heading';
 import Input from '../inputs/input';
@@ -14,7 +14,7 @@ import Button from '../button';
 import { toast } from 'react-hot-toast';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import useLoginModal from '../hooks/use-login-modal';
+import useLoginModal from '../../hooks/use-login-modal';
 
 const RegisterModal = () => {
 	const router = useRouter();

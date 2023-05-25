@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import useRentModal from '../hooks/use-rent-modal';
+import useRentModal from '../../hooks/use-rent-modal';
 import Modal from './modal';
 import Heading from '../heading';
 import { categories } from '../navbar/categories';

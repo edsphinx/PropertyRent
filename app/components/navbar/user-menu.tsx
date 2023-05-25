@@ -6,9 +6,9 @@ import { signOut } from 'next-auth/react';
 import { SafeUser } from '@/app/types';
 import Avatar from '../avatar';
 import MenuItem from './menu-item';
-import useRegisterModal from '../hooks/use-register-modal';
-import useLoginModal from '../hooks/use-login-modal';
-import useRentModal from '../hooks/use-rent-modal';
+import useRegisterModal from '../../hooks/use-register-modal';
+import useLoginModal from '../../hooks/use-login-modal';
+import useRentModal from '../../hooks/use-rent-modal';
 import { useRouter } from 'next/navigation';
 
 interface UserMenuProps {
@@ -21,6 +21,10 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 	const loginModal = useLoginModal();
 	const rentModal = useRentModal();
 	const [isOpen, setIsOpen] = useState(false);
+
+	function closeMenuOnClick() {
+		setIsOpen((value) => !value);
+	}
 
 	const toggleOpen = useCallback(() => {
 		setIsOpen((value) => !value);
@@ -58,19 +62,31 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 						{currentUser ? (
 							<>
 								<MenuItem
-									onClick={() => router.push('/trips')}
+									onClick={() => {
+										closeMenuOnClick();
+										router.push('/trips');
+									}}
 									label='My Trips'
 								/>
 								<MenuItem
-									onClick={() => router.push('/favorites')}
+									onClick={() => {
+										closeMenuOnClick();
+										router.push('/favorites');
+									}}
 									label='My Favorites'
 								/>
 								<MenuItem
-									onClick={() => router.push('/reservations')}
+									onClick={() => {
+										closeMenuOnClick();
+										router.push('/reservations');
+									}}
 									label='My Reservations'
 								/>
 								<MenuItem
-									onClick={() => router.push('/properties')}
+									onClick={() => {
+										closeMenuOnClick();
+										router.push('/properties');
+									}}
 									label='My Properties'
 								/>
 								<MenuItem

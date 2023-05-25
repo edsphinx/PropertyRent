@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { SafeUser } from '@/app/types';
-import useCountries from '../hooks/use-countries';
+import useCountries from '../../hooks/use-countries';
 import Heading from '../heading';
 import HeartButton from '../heart-button';
 

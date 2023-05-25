@@ -17,7 +17,7 @@ import ListingInfo from '@/app/components/listings/listing-info';
 import ListingHead from '@/app/components/listings/ListingHead';
 import ListingReservation from '@/app/components/listings/listing-reservation';
 
-import useLoginModal from '@/app/components/hooks/use-login-modal';
+import useLoginModal from '@/app/hooks/use-login-modal';
 
 const initialDateRange = {
 	startDate: new Date(),
