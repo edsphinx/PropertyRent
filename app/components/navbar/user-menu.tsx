@@ -90,7 +90,10 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 									label='My Properties'
 								/>
 								<MenuItem
-									onClick={rentModal.onOpen}
+									onClick={() => {
+										closeMenuOnClick();
+										rentModal.onOpen;
+									}}
 									label='Airbnb My Home'
 								/>
 								<hr />
